@@ -13,6 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="77f-g0-3dI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Wro-hS-PcS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SagradaFamilia.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="xX8-V0-G1L">
@@ -58,6 +59,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbertEinsteinStamp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fYE-xR-A8Y">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="259" y="140" width="75" height="75"/>
+                                </variation>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter Name" minimumFontSize="17" background="Enter Message" translatesAutoresizingMaskIntoConstraints="NO" id="kdM-hV-wUZ">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -97,30 +104,35 @@
                                     <rect key="frame" x="16" y="83" width="368" height="49"/>
                                 </variation>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbertEinsteinStamp.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="fYE-xR-A8Y">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43k-2x-2Mm">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="259" y="140" width="75" height="75"/>
+                                    <rect key="frame" x="0.0" y="335" width="361" height="21"/>
                                 </variation>
-                            </imageView>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="fYE-xR-A8Y"/>
                                 <exclude reference="kdM-hV-wUZ"/>
                                 <exclude reference="V64-HE-VjL"/>
                                 <exclude reference="Lev-Cs-sa3"/>
                                 <exclude reference="FhN-hJ-WQc"/>
-                                <exclude reference="fYE-xR-A8Y"/>
+                                <exclude reference="43k-2x-2Mm"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="fYE-xR-A8Y"/>
                                 <include reference="kdM-hV-wUZ"/>
                                 <include reference="V64-HE-VjL"/>
                                 <include reference="Lev-Cs-sa3"/>
                                 <include reference="FhN-hJ-WQc"/>
-                                <include reference="fYE-xR-A8Y"/>
+                                <include reference="43k-2x-2Mm"/>
                             </mask>
                         </variation>
                     </view>
@@ -128,7 +140,8 @@
                         <outlet property="enterMessageTextField" destination="V64-HE-VjL" id="1Dm-Qg-2pg"/>
                         <outlet property="enterNameTextField" destination="kdM-hV-wUZ" id="aza-6a-prB"/>
                         <outlet property="mailButton" destination="Lev-Cs-sa3" id="irt-sb-e62"/>
-                        <outlet property="messageLabel" destination="FhN-hJ-WQc" id="fJZ-Ye-cit"/>
+                        <outlet property="messageLabel" destination="FhN-hJ-WQc" id="bOW-7n-hdx"/>
+                        <outlet property="nameLabel" destination="43k-2x-2Mm" id="yEO-ME-0ca"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
